@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile-and-run",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "g++ '${file}' -o '${fileDirname}/${fileBasenameNoExtension}' && echo -e \"\\n--- RUNNING ---\\n\" && '${fileDirname}/${fileBasenameNoExtension}'"
+            ],
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",        // <-- Open a new terminal every time
+                "echo": true,
+                "focus": true
+            }
+        }
+    ]
+}
